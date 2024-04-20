@@ -24,9 +24,9 @@ COLUMN TABLE "Departments" (
 );
 ```
 
-# Datenimport-Konfigurationen
+## Datenimport-Konfigurationen
 
-## Import für "Employees" Employees.hdbtabledata
+### Import für "Employees" Employees.hdbtabledata
 ```json
 {
   "format_version": 1,
@@ -55,7 +55,7 @@ COLUMN TABLE "Departments" (
   ]
 }
 ```
- ## Import für "Department" Departments.hdbtabledata
+ ### Import für "Department" Departments.hdbtabledata
 ```json
 {
   "format_version": 1,
