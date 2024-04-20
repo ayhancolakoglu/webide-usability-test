@@ -84,7 +84,7 @@ COLUMN TABLE "Departments" (
 ```
 ## Load Dateien 
 
-### Loads für "Employee"  Employees.csv
+### Loads für "Employees"  Employees.csv
 ```plaintext
 EmployeeID,Name,DepartmentID,Salary
 1,John Doe,101,60000
@@ -93,7 +93,7 @@ EmployeeID,Name,DepartmentID,Salary
 4,Chris Brown,103,65000
 ```
 
-### Loads für "Department" Departments.csv
+### Loads für "Departments" Departments.csv
 ```plaintext
 DepartmentID,DepartmentName
 101,IT
