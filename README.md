@@ -1,5 +1,10 @@
-# webide-usability-test
--- Employees.hdbtable
+
+# Usability-Test SAP  WEB IDE 
+
+## Datenbank Tabellen 
+
+### Tabelle "Employees"  Employees.hdbtable
+```sql
 COLUMN TABLE "Employees" (
     "EmployeeID" INTEGER,
     "Name" NVARCHAR(100),
@@ -7,15 +12,22 @@ COLUMN TABLE "Employees" (
     "Salary" INTEGER,
     primary key ("EmployeeID")
 );
+```
 
--- Employees.hdbtabledata
-EmployeeID,Name,DepartmentID,Salary
-1,John Doe,101,60000
-2,Jane Smith,102,75000
-3,Emily Jones,101,50000
-4,Chris Brown,103,65000
 
--- Employees.hdbtable imports
+### Tabelle "Departments"  Deaprtments.hdbtabledata
+```sql
+COLUMN TABLE "Departments" (
+    "DepartmentID" INTEGER,
+    "DepartmentName" NVARCHAR(100),
+    primary key ("DepartmentID")
+);
+```
+
+# Datenimport-Konfigurationen
+
+## Import für "Employees" Employees.hdbtabledata
+```json
 {
   "format_version": 1,
   "imports": [
@@ -31,26 +43,20 @@ EmployeeID,Name,DepartmentID,Salary
         }
       },
       "import_settings": {
-        "import_columns": ["EmployeeID", "Name", "DepartmentID", "Salary"]
-      },
-      "column_mappings": {
-        "EmployeeID": 1,
-        "Name": 2,
-        "DepartmentID": 3,
-        "Salary": 4
+        "import_columns": ["EmployeeID", "Name", "DepartmentID", "Salary"],
+        "column_mappings": {
+          "EmployeeID": 1,
+          "Name": 2,
+          "DepartmentID": 3,
+          "Salary": 4
+        }
       }
     }
   ]
 }
-
--- Departments.hdbtable
-COLUMN TABLE "Departments" (
-    "DepartmentID" INTEGER,
-    "DepartmentName" NVARCHAR(100),
-    primary key ("DepartmentID")
-);
-
--- Departments.hdbtable imports
+```
+ ## Import für "Department" Departments.hdbtabledata
+```json
 {
   "format_version": 1,
   "imports": [
@@ -66,18 +72,38 @@ COLUMN TABLE "Departments" (
         }
       },
       "import_settings": {
-        "import_columns": ["DepartmentID", "DepartmentName"]
-      },
-      "column_mappings": {
-        "DepartmentID": 1,
-        "DepartmentName": 2
+        "import_columns": ["DepartmentID", "DepartmentName"],
+        "column_mappings": {
+          "DepartmentID": 1,
+          "DepartmentName": 2
+        }
       }
     }
   ]
 }
+```
+## Load Dateien 
 
--- Departments.hdbtabledata
+### Loads für "Employee"  Employees.csv
+```plaintext
+EmployeeID,Name,DepartmentID,Salary
+1,John Doe,101,60000
+2,Jane Smith,102,75000
+3,Emily Jones,101,50000
+4,Chris Brown,103,65000
+```
+
+### Loads für "Department" Departments.csv
+```plaintext
 DepartmentID,DepartmentName
 101,IT
 102,Human Resources
 103,Finance
+```
+
+
+
+
+
+
+
