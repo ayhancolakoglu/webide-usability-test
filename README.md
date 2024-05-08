@@ -15,7 +15,7 @@ COLUMN TABLE "Employees" (
 ```
 
 
-### Tabelle "Departments"  Deaprtments.hdbtabledata
+### Tabelle "Departments"  Deaprtments.hdbtable
 ```sql
 COLUMN TABLE "Departments" (
     "DepartmentID" INTEGER,
